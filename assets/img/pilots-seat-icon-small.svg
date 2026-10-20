@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+<rect width="1024" height="1024" fill="#0E2559"/>
+<g transform="translate(0 44)">
+<path d="M 174.9 597.2 A 372 372 0 1 1 849.1 597.2" fill="none" stroke="#6384D3" stroke-width="12"/>
+<path d="M 214.1 612 A 344 344 0 1 1 809.9 612" fill="none" stroke="#6384D3" stroke-width="52" stroke-dasharray="16 164.118" stroke-dashoffset="8"/>
+<polygon points="472,36 552,36 512,106" fill="#6384D3"/>
+<polygon points="512,262 478,440 546,440" fill="#6384D3"/>
+<path d="M545.2 143.4V232H526.9L502.7 191.4L494.1 171.8L493.7 171.9L495.9 191.9V232H476.1V158.7L474.2 145.3L494.8 143.6L519.5 185L528.1 206L528.5 205.9L525.7 184.7V145.4Z" fill="#6384D3"/>
+<path d="M 236 672 C 186 662 128 646 114 610 C 100 574 150 532 226 492 C 310 448 364 390 512 390 C 660 390 714 448 798 492 C 874 532 924 574 910 610 C 896 646 838 662 788 672 Z" fill="#27469A"/>
+<path d="M 250 770 Q 512 800 774 770 C 790 830 700 886 512 886 C 324 886 234 830 250 770 Z" fill="#060C20"/>
+<path d="M 236 668 L 788 668 L 778 770 Q 512 800 246 770 Z" fill="#060C20"/>
+<path d="M 318 812 Q 512 838 706 812" fill="none" stroke="#27469A" stroke-width="12" stroke-linecap="round"/>
+<line x1="250" y1="719" x2="774" y2="719" stroke="#F4B942" stroke-width="36"/>
+
+<circle cx="243" cy="719" r="28" fill="#F4B942"/>
+<circle cx="781" cy="719" r="28" fill="#F4B942"/>
+<g stroke="#F4B942" stroke-width="18" stroke-linecap="round"><line x1="462" y1="526" x2="328" y2="514"/><line x1="460" y1="550" x2="360" y2="544"/><line x1="466" y1="574" x2="396" y2="572"/><line x1="562" y1="526" x2="696" y2="514"/><line x1="564" y1="550" x2="664" y2="544"/><line x1="558" y1="574" x2="628" y2="572"/></g>
+<circle cx="512" cy="548" r="46" fill="#0E2559" stroke="#F4B942" stroke-width="11"/>
+<path d="M 512 518 C 517 518 519 524 519 530 L 519 540 L 542 558 L 542 565 L 519 558 L 519 568 L 527 575 L 527 580 L 512 576 L 497 580 L 497 575 L 505 568 L 505 558 L 482 565 L 482 558 L 505 540 L 505 530 C 505 524 507 518 512 518 Z" fill="#F4B942"/>
+</g>
+</svg>

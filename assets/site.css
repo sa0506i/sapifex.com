@@ -1,0 +1,114 @@
+/* sapifex.com: shared styles. Fonts: B612 (SIL OFL, see fonts/OFL.txt), self-hosted so no request leaves this site. */
+@font-face { font-family: "B612"; src: url("fonts/B612-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "B612"; src: url("fonts/B612-Bold.ttf") format("truetype"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "B612 Mono"; src: url("fonts/B612Mono-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff; --surface: #f4f6f2; --fg: #17191d; --muted: #5c636b; --line: #dfe3e6;
+  --accent: #2f7d4f; --on-accent: #ffffff; --focus: #2f7d4f;
+  --sans: "B612", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: "B612 Mono", ui-monospace, Consolas, monospace;
+  --measure: 42rem; --gutter: 1rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0f1115; --surface: #171a1f; --fg: #e9eaec; --muted: #a2a8af; --line: #272b32; --accent: #7fd39a; --on-accent: #0f1115; --focus: #7fd39a; }
+}
+/* Pilot’s Seat pages: the app's own skin (docs/design/tokens.json, skin "classic"). Dark only, like the app. */
+html.ps {
+  color-scheme: dark;
+  --bg: #000000; --surface: #121316; --fg: #e8eaed; --muted: #9aa0a6; --line: #2a2e35;
+  --accent: #4fc3f7; --on-accent: #000000; --focus: #4fc3f7;
+  --bezel: #2a2e35; --bevel-light: #4a505a; --bevel-shade: #15171b; --face: #121417; --ink: #f2f1ec;
+  --ok: #66bb6a; --on-ok: #000000; --caution: #ffb300; --flag-off: #e53935; --on-flag-off: #000000; --held: #9aa0a6;
+  --sky: #2f6fb0; --ground: #7a4f2a; --lamp-live: #5cf27a;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--bg); color: var(--fg); font: 17px/1.55 var(--sans); -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: .15em; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 2px; }
+img, svg { display: block; max-width: 100%; height: auto; }
+h1, h2, h3 { line-height: 1.2; margin: 0; font-weight: 700; }
+h1 { font-size: clamp(2rem, 5vw, 2.75rem); letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; margin-top: 3rem; }
+h3 { font-size: 1.1rem; margin-top: 1.5rem; }
+p { margin: .6rem 0; }
+ul { padding-left: 1.2rem; }
+li { margin: .3rem 0; }
+.lead { font-size: 1.2rem; line-height: 1.45; max-width: 36rem; }
+.meta { color: var(--muted); font-size: .95rem; }
+.mono { font-family: var(--mono); font-size: .9rem; }
+.wrap { max-width: var(--measure); margin: 0 auto; padding: 0 var(--gutter); }
+.wide { max-width: 64rem; }
+
+/* top navigation: the three places on this site */
+.site-nav { border-bottom: 1px solid var(--line); }
+.site-nav .wrap { display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; align-items: baseline; min-height: 3.5rem; padding-top: .75rem; padding-bottom: .75rem; }
+.site-nav a { color: var(--fg); text-decoration: none; font-weight: 400; padding: .2rem 0; }
+.site-nav a[aria-current="page"] { font-weight: 700; border-bottom: 2px solid var(--accent); }
+.site-nav .brand { font-weight: 700; margin-right: auto; }
+.site-nav .brand:hover, .site-nav a:hover { text-decoration: underline; }
+
+main { padding: 2.5rem 0 4rem; }
+.hero { padding: 1.5rem 0 1rem; }
+.hero p { max-width: 36rem; }
+
+/* product rows on the landing page: icon, name, one line, where it lives */
+.products { list-style: none; padding: 0; margin: 1rem 0 0; border-top: 1px solid var(--line); }
+.products li { display: grid; grid-template-columns: 4rem 1fr; gap: 1rem 1.25rem; padding: 1.5rem 0; border-bottom: 1px solid var(--line); align-items: start; }
+.products img { width: 4rem; height: 4rem; border-radius: 22%; }
+.products h3 { margin: 0; font-size: 1.25rem; }
+.products p { margin: .35rem 0 .5rem; }
+.products .where { font-size: .95rem; }
+@media (max-width: 30rem) { .products li { grid-template-columns: 3rem 1fr; } .products img { width: 3rem; height: 3rem; } }
+
+.ic { width: 20px; height: 20px; flex: none; }
+.row { display: flex; gap: .75rem; align-items: flex-start; }
+.row .ic { margin-top: .3rem; color: var(--muted); }
+
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 1rem 1.25rem; margin: 1rem 0; }
+.btn { display: inline-flex; align-items: center; gap: .5rem; background: var(--accent); color: var(--on-accent); font-weight: 700; text-decoration: none; padding: .7rem 1.1rem; border-radius: 10px; min-height: 48px; }
+.btn .ic { color: inherit; width: 18px; height: 18px; }
+.btn:hover { opacity: .9; }
+
+address { font-style: normal; }
+.site-footer { border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; padding: 1.25rem 0 2rem; }
+.site-footer nav { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; }
+.site-footer a { color: var(--muted); }
+
+/* ------------------------------------------------------------------ Pilot’s Seat product page */
+html.product .site-nav .wrap, html.product .site-footer .wrap { max-width: 64rem; }
+.ps .wordmark { font-size: clamp(1.9rem, 6vw, 3rem); letter-spacing: .08em; text-transform: uppercase; }
+.ps .status { display: inline-flex; align-items: center; gap: .6rem; margin: 1rem 0 0; padding: .45rem .9rem .45rem .75rem; border: 1px solid var(--bezel); border-radius: 9999px; color: var(--fg); font-size: .95rem; }
+.ps .status .lamp { width: 10px; height: 10px; border-radius: 50%; background: var(--lamp-live); box-shadow: 0 0 6px var(--lamp-live); }
+.ps .screen { margin: 2rem auto 0; border: 6px solid var(--bezel); border-radius: 16px; background: var(--face); overflow: hidden; }
+.ps .screen img { width: 100%; }
+.ps figcaption { color: var(--muted); font-size: .9rem; margin: .5rem 0 0; }
+.ps .instruments { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: .75rem; }
+.ps .instruments li { background: var(--surface); border: 1px solid var(--bezel); border-radius: 10px; padding: .85rem 1rem; display: grid; grid-template-columns: 3.4rem 1fr; gap: .25rem .75rem; align-items: baseline; }
+.ps .instruments .lbl { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); background: var(--face); border: 1px solid var(--bezel); border-radius: 6px; padding: .2rem .35rem; text-align: center; }
+.ps .instruments b { display: block; }
+.ps .instruments span.src { grid-column: 2; color: var(--muted); font-size: .9rem; }
+.ps .steps { list-style: none; padding: 0; margin: .5rem 0 0; }
+.ps .steps li { display: grid; grid-template-columns: 1.5rem 1fr; gap: 0 .9rem; padding: .9rem 0; border-top: 1px solid var(--line); }
+.ps .steps li:first-child { border-top: 0; }
+.ps .steps .ic { color: var(--muted); margin-top: .25rem; }
+.ps .gallery { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); margin-top: 1rem; }
+.ps .gallery figure { margin: 0; }
+.ps .gallery .screen { margin: 0; border-width: 4px; border-radius: 12px; }
+.ps .gallery .cap { display: flex; gap: .5rem; align-items: flex-start; margin-top: .6rem; }
+.ps .gallery .cap .ic { color: var(--muted); margin-top: .15rem; }
+.ps .notice { margin-top: 3rem; border: 1px solid var(--bezel); border-radius: 10px; padding: 1rem 1.25rem; background: var(--surface); }
+.ps .flag { display: inline-block; background: var(--flag-off); color: var(--on-flag-off); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; border-radius: 6px; padding: .2rem .45rem; vertical-align: middle; margin-right: .5rem; }
+.ps .site-nav a[aria-current="page"] { border-bottom-color: var(--accent); }
+
+/* ------------------------------------------------------------------ legal pages */
+.legal h2 { padding-top: 1rem; border-top: 1px solid var(--line); }
+.legal nav.toc { margin: .75rem 0 1.5rem; font-size: .95rem; }
+.legal nav.toc a + a::before { content: " / "; color: var(--muted); }
+.legal .summary { border: 1px solid var(--line); border-radius: 10px; padding: .25rem 1rem; margin: 1rem 0; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+@media print { .site-nav, .site-footer nav { display: none; } }
